@@ -45,12 +45,24 @@ int main()
   
   
 		 case 1: // Genesi Simisterra
-	cout<<"ESTA FUNCION PERMITE INGRESAR EL VALOR A LAS MATRICES";
-		ingresar(matriz1,matriz2);
-		mostrar(matriz1);
-		mostrar(matriz2);
+     void ingresar() {
+       float matriz[5][5]; 
+	 
+     cout<<"\=======INGRESAR LOS VALORES DE LAS MATRICES=======\n";
+       float a, ingresar;
+       for(int i = 0; i < 5; i++){
+     cout << "\n Ingresar valor " << i + 1 << "****:\n";
+       for(int j = 0; j < 5; j++){
+     cout << "\n posicion " << i + 1 << "****:\n";
+     cin >> a;
+     matriz[i][j] = a;
+     }
+     }
+     }
+     ingresar(matriz1,matriz2);
+     mostrar(matriz1);
+     mostrar(matriz2);
 		break;
-    
     
     
 	   case 2: // Kevin Antonio Tapuy Cañola
@@ -86,7 +98,7 @@ int main()
 
     }
 		
-transpuesta(matriz1,resultado);
+    transpuesta(matriz1,resultado);
 		mostrar(resultado);
 		break;
     
