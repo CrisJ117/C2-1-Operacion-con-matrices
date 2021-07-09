@@ -12,44 +12,44 @@ using namespace std;
 #include "colaborador4.h"     // Clarisa Ortiz Castillo
 #include "colaborador5.h"     // Cristopher Justyn Tigua Vivero
 
-void mostrar(float (*r)[5])
+       void mostrar(float (*r)[5])
 {
-  cout<<endl<<endl;
-  for(int i=0;i<5;i++){
-	for(int j=0;j<5;j++){
-	cout<<r[i][j]<<" ";
-}
-  cout<<"\n";
-}
-
-
+       cout<<endl<<endl;
+        for(int i=0;i<5;i++){
+        for(int j=0;j<5;j++){
+       cout<<r[i][j]<<" ";
+	}
+       cout<<"\n";
+	}
 
 }
 
 //FUCION PRINCIPAL
 int main()
 {
-	int op,flag;
-	float matriz1[5][5],matriz2[5][5],resultado[5][5]={{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+       int op,flag, cantidad;
+       float matriz1[5][5],matriz2[5][5],resultado[5][5]={{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 	do{
-	system("clear");
-	cout<<"OPERACIONES CON MATRICES EN 2 DIMENSIO"<<endl<<endl;
-	cout<<"1.- Ingresar los valores de las matrices \n";
-	cout<<"2.- Obtener el producto de las dos matrices \n";
-	cout<<"3.- Mostrar la potencias 2 de la primera matriz \n"; 
-	cout<<"4.- Mostrar la transpuesta de la primera matriz \n";
-	cout<<"5.- Calcular la media y varianza y compararlas \n";
-	cout<<"0.- Salir del menu \n";
-  cout<<" Ingrese una opción : "; cin>>op;
+        system("clear");
+      cout<<"         ====================== MENU ==========================="<<endl;
+      cout<<"         ==       OPERACIONES CON MATRICES EN 2 DIMENSIO      =="<<endl;
+      cout<<"         == 1.- Ingresar los valores de las matrices \n       =="<<endl;
+      cout<<"         == 2.- Obtener el producto de las dos matrices \n    =="<<endl;
+      cout<<"         == 3.- Mostrar la potencias 2 de la primera matriz \n=="<<endl; 
+      cout<<"         == 4.- Mostrar la transpuesta de la primera matriz \n=="<<endl;
+      cout<<"         == 5.- Calcular la media y varianza y compararlas \n =="<<endl;
+      cout<<"         == 0.- Salir del menu \n                             =="<<endl;
+      cout<<"         ======================================================="<<endl;
+      cout<<" Ingrese una opción : "; cin>>op;
 	switch(op){
   
   
 		 case 1: // Genesi Simisterra
      void ingresar() {
-       float matriz[5][5]; 
+      float matriz[5][5]; 
 	 
      cout<<"\=======INGRESAR LOS VALORES DE LAS MATRICES=======\n";
-       float a, ingresar;
+      float a, ingresar;
        for(int i = 0; i < 5; i++){
      cout << "\n Ingresar valor " << i + 1 << "****:\n";
        for(int j = 0; j < 5; j++){
@@ -82,66 +82,66 @@ int main()
     
 		case 4: // Clarisa Ortiz Castillo
 	// ESTA FUNCION CALCULA LA TRANSPUEST DE LA PRIMERA MATRIZ
-    void transpuesta(float (*m1)[5], float (*r)[5]){  
+     void transpuesta(float (*m1)[5], float (*r)[5]){  
 
-    cout<<"\======OBTENER LA TRASPUESTA DE LA PRIMERA MATRIZ======\n"; 
+     cout<<"\======OBTENER LA TRASPUESTA DE LA PRIMERA MATRIZ======\n"; 
 
-      for(int m=0;m<5;m++){
-      for(int n=0;n<5;n++){
+       for(int m=0;m<5;m++){
+       for(int n=0;n<5;n++){
     
        r[n][m]=m1[n][m];
     
-    cout<<r[n][m]<<" ";
+     cout<<r[n][m]<<" ";
     }
-    cout<<"\n"; 
+     cout<<"\n"; 
     } 
 
     }
 		
-    transpuesta(matriz1,resultado);
+     transpuesta(matriz1,resultado);
 		mostrar(resultado);
 		break;
     
     
 		case 5: // Cristopher Justyn Tigua Vivero
 	//CUADO CALCULA Y MUESTRA LAS MADIA Y VARIANZA DE LAS DOS MATRICES
-    void mediayvarianza(float (*m1)[5], float (*m2)[]){
+     void mediayvarianza(float (*m1)[5], float (*m2)[]){
 
-    cout<<"\=============CALCULAR LA MEDIA Y VARIANZA=============\n";
-    cout<<"\nCuantos numeros son? ";
-    cin>>cantidad;
+     cout<<"\=============CALCULAR LA MEDIA Y VARIANZA=============\n";
+     cout<<"\nCuantos numeros son? ";
+     cin>>cantidad;
      
-    sumatoria = new int[cantidad];
+     sumatoria = new int[cantidad];
      
-      for(int i= 0;i < cantidad;i++)
+       for(int i= 0;i < cantidad;i++)
     {
-    cout<<"Escribe el valor "<<i+1<<":";
-    cin>>sumatoria[i];
+     cout<<"Escribe el valor "<<i+1<<":";
+     cin>>sumatoria[i];
     }
     
-      for(int e = 0;e < cantidad;e++)
+       for(int e = 0;e < cantidad;e++)
     {
-    media = media + sumatoria[e];
+       media = media + sumatoria[e];
     }
     
-    media = media / cantidad;
+       media = media / cantidad;
     
     system("cls");
     
-    cout<<"La Media es: ";
-    cout<<media<<endl;
+     cout<<"La Media es: ";
+     cout<<media<<endl;
     
-      for(int k = 0;k < cantidad;k++)
+       for(int k = 0;k < cantidad;k++)
     {
-    varianza = varianza + (((sumatoria[k])-(media))*((sumatoria[k])-(media)));
+     varianza = varianza + (((sumatoria[k])-(media))*((sumatoria[k])-(media)));
          
     }
     }
-    varianza = varianza / cantidad;d
-    cout<<"la varianza es: ";
-    cout<<varianza<<endl;
-    cout<<"La desviacion estandar es +/-: ";
-    cout<<sqrt(varianza);
+     varianza = varianza / cantidad;d
+     cout<<"la varianza es: ";
+     cout<<varianza<<endl;
+     cout<<"La desviacion estandar es +/-: ";
+     cout<<sqrt(varianza);
     
     delete[] sumatoria;
 		break;
@@ -149,12 +149,12 @@ int main()
 		break;
 		}
 		  if(op!=0){
-	 cout << "Opcion no permitida !\n" <<  "Press Enter to continue\n";
+     cout << "Opcion no permitida !\n" <<  "Press Enter to continue\n";
     // pause the program until user input
 	           flag=cin.ignore().get();
 		}		  
 	    if(op==0){
-	 cout<<"Salimos del Sistema: "<<endl;
+     cout<<"Salimos del Sistema: "<<endl;
 
 	}
 	}while(op!=0);
