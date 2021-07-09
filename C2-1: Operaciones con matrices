@@ -66,12 +66,27 @@ int main()
     
     
 	   case 2: // Kevin Antonio Tapuy Cañola
-	// ESTA FUNCION PERMITE CALCULAR EL PRODUCTO ENTRE DOS MATRICES.
-		producto(matriz1,matriz2,resultado);
-		mostrar(resultado);
+      void producto(float (*m1)[5], float (*m2)[5], float (*r)[5]){
+      cout<<"\========OBTENER EL PRUDUCTO DE DOS MATRIZES========\n";
+
+      for(int i=0; i<5; ++i){
+      for(int j=0; j<5; ++j){
+      r[i] [j] = 0;
+    }
+    }
+      for(int i=0; i<5; ++ i){
+      for(int j=0; j<=5; ++j){
+      for(int z=0; z<5; ++z)
+      r[i][j] += m1[i][z] * m2[z][j];
+    }
+	
+    }	
+	producto(matriz1,matriz2,resultado);
+	mostrar(resultado);
 		break;
-    
-    
+	producto(matriz1,matriz2,resultado);
+	mostrar(resultado);
+		break;    
     
 		 case 3:
 	// ESTA FUNCION PERMITE OBTENER LA POTENCIA 2 DE UNA MATRIZ.
