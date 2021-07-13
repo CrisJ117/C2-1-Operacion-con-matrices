@@ -1,6 +1,7 @@
 void ingresar(float (*m1)[5], float (*m2)[5])
 {
 
+	
  	cout<<"\=======INGRESAR LOS VALORES DE LAS MATRICES=======\n";
 	 float a, ingresar;
 	   for(int i = 0; i < 5; i++){
